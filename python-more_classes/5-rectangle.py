@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class with eval()-ready representation and deletion message."""
+"""Defines a Rectangle class with eval()-ready representation
+and deletion message."""
 
 
 class Rectangle:
@@ -50,4 +51,4 @@ class Rectangle:
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        print("Bye rectangle...")
+                print("Bye rectangle...")
