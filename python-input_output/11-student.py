@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a Student class with JSON serialization and reloading."""
- 
+
 
 class Student:
     """Class that defines a student by first name, last name, and age."""
@@ -26,9 +26,6 @@ class Student:
         return self.__dict__
 
     def reload_from_json(self, json):
-        """Replace all attributes of the Student instance from a dictionary.
-
-        Keys must be public attribute names and values their new values.
-        """
+        """Replace all attributes of the Student instance from a dictionary."""
         for key, value in json.items():
             setattr(self, key, value)
