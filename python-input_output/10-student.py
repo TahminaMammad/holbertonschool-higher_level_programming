@@ -18,9 +18,9 @@ class Student:
         list are included. Otherwise, all attributes are returned.
         """
         if isinstance(attrs, list) and all(isinstance(a, str) for a in attrs):
-            return {
-                key: getattr(self, key)
-                for key in attrs
-                if hasattr(self, key)
-            }
+            filtered = {}
+            for key in attrs:
+                if hasattr(self, key):
+                    filtered[key] = getattr(self, key)
+            return filtered
         return self.__dict__
